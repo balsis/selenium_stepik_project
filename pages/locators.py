@@ -1,9 +1,15 @@
-class MainPageLocators:
+class BasePageLocators:
     LOGIN_LINK = ("xpath", "//a[@id='login_link']")
+
+
+class MainPageLocators:
+    pass
+
 
 class LoginPageLocators:
     LOGIN_FORM = ("xpath", "//form[@id='login_form']")
     REGISTER_FORM = ("xpath", "//form[@id='register_form']")
+
 
 class ProductPageLocators:
     ADD_TO_BASKET_BUTTON = ("xpath", "//button[@class='btn btn-lg btn-primary btn-add-to-basket']")
