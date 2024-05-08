@@ -3,7 +3,7 @@ class BasePageLocators:
 
 
 class MainPageLocators:
-    pass
+    BASKET_LINK = ("xpath", "//a[@class='btn btn-default']")
 
 
 class LoginPageLocators:
@@ -15,5 +15,10 @@ class ProductPageLocators:
     ADD_TO_BASKET_BUTTON = ("xpath", "//button[@class='btn btn-lg btn-primary btn-add-to-basket']")
     BOOK_NAME = ("xpath", "//h1")
     BOOK_PRICE = ("xpath", "//p[@class='price_color']")
-    BOOK_NAME_ADDED_TO_CART = ("xpath", "(//div[@class='alertinner ']/strong)[1]")
-    COST_OF_THE_SHOPPING_CART = ("xpath", "//div[@class='alertinner ']/p/strong")
+    BOOK_NAME_ADDED_TO_BASKET = ("xpath", "(//div[@class='alertinner ']/strong)[1]")
+    COST_OF_THE_BASKET = ("xpath", "//div[@class='alertinner ']/p/strong")
+
+
+class BasketPageLocators:
+    EMPTY_BASKET = ("xpath", "//div[@id='content_inner']/p")
+    BASKET_ITEMS = ("xpath", "//div[@class='basket-items']")

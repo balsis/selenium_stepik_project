@@ -4,4 +4,4 @@ from pages.locators import MainPageLocators
 
 
 class MainPage(BasePage):
-    pass
+     pass

@@ -2,6 +2,7 @@ import time
 
 import pytest
 
+from pages.basket_page import BasketPage
 from pages.product_page import ProductPage
 
 
@@ -53,3 +54,13 @@ def test_guest_can_go_to_login_page_from_product_page(driver):
     page = ProductPage(driver, url)
     page.open()
     page.go_to_login_page()
+
+
+def test_guest_cant_see_product_in_basket_opened_from_product_page(driver):
+    url = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207'
+    page = ProductPage(driver, url)
+    page.open()
+    page.go_to_basket_page()
+    basket_page = BasketPage(driver, driver.current_url)
+    basket_page.check_empty_basket()
+    basket_page.check_no_items_in_basket()
