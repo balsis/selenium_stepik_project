@@ -25,6 +25,7 @@ def get_options(driver_name, user_language):
     options.add_argument("--window-size=1920,1080")
     options.add_argument('--incognito')
     options.add_argument("--disable-cache")
+    options.add_argument('--headless')
     if driver_name == "chrome":
         options.add_experimental_option(
             'prefs', {'intl.accept_languages': user_language})
